@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadro para la final Eurocopa 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="https://www.epdata.es/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+    <style>
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+    border-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a:active {
+    color: #000000;
+}
+
+a:visited {
+    color: #000000;
+}
+
+table {
+    width: 100%;
+    height: 30%;
+    background-color: rgb(245, 245, 245);
+}
+
+#celda-logo {
+    height: 42px;
+    border-bottom: #000000 2px solid;
+}
+
+#logo-euro {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+th {
+    height: 42px;
+
+}
+
+thead {
+    background-color: white;
+}
+
+tbody {
+    display: flex;
+    flex-direction: row;
+}
+
+.icono {
+    width: 82px;
+    margin-right: 22px;
+}
+
+#medallas {
+    width: 262px;
+    margin-right: 22px;
+}
+
+#medallas-paises {
+    width: 292px;
+    margin-right: 22px;
+}
+
+.seccion {
+    background: linear-gradient(to bottom, rgb(248, 248, 247), #f9fbff);
+    font-weight: bolder;
+    line-height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion:hover {
+    background: linear-gradient(to bottom, #f0f0f0, #f9fbff);
+    cursor: pointer;
+}
+
+
+tr {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#seccion-clasificacion{
+    border-left: rgb(214, 214, 214) 2px solid;
+}
+
+
+#seccion-noticias{
+    border-left: rgb(214, 214, 214) 2px solid;
+}
+    </style>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th id="celda-logo"><img id="logo-euro" src="img/logo-olimpiadas.png" /></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <td class="seccion">
+                        <a target="_parent"
+                        href="https://www.europapress.es/deportes/futbol-00162/noticia-partidos-hoy-eurocopa-2024-hora-donde-ver-20240627135347.html">
+                        <div><img id="medallas" src="img/medallas-esp.png" /></div>
+                        <div>Medallas<br><span class="parte-baja">de España</span></div>
+                        </a>
+                    </td>
+                <td id="seccion-clasificacion" class="seccion">
+                    <a target="_parent"
+                    href="https://www.epdata.es/datos/eurocopa-equipos-jugadores-estadisticas-historicas-graficos/597">
+                    <div><img id="medallas-paises" src="img/medallas-paises.png" /></div>
+                </a>
+                </td>
+                <td id="seccion-noticias" class="seccion">
+                    <a target="_parent"
+                    href="https://www.europapress.es/deportes/futbol/eurocopa-00765/">
+                    <div><img class="icono" src="img/laultimahora.png" /></div>
+                    <div>La última hora<br><span class="parte-baja"></span></div>
+                </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+
+</html>
