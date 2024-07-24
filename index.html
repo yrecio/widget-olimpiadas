@@ -17,144 +17,345 @@
 <body>
 
     <style>
-body {
-    margin: 0 auto;
-    font-family: sans-serif;
-    border-style: none;
-}
+        /* Partes principales del widget */
 
-a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+        body {
+            margin: 0 auto;
+            font-family: sans-serif;
+            border-style: none;
+        }
 
+        #widget-olimpiadas {
+            width: 100%;
+            height: 30%;
+            background-color: rgb(245, 245, 245);
+        }
 
-a:active {
-    color: #000000;
-}
+        .tr-widget {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
 
-a:visited {
-    color: #000000;
-}
+        /* Thead del widget */
 
-table {
-    width: 100%;
-    height: 30%;
-    background-color: rgb(245, 245, 245);
-}
+        #celda-logo {
+            height: 42px;
+            border-bottom: #000000 2px solid;
+        }
 
-#celda-logo {
-    height: 42px;
-    border-bottom: #000000 2px solid;
-}
+        #logo-euro {
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+        }
 
-#logo-euro {
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-}
+        /* Tbody del widget. Partes generales */
 
-th {
-    height: 42px;
+        #tbody-widget {
+            display: flex;
+            flex-direction: row;
+        }
 
-}
+        .seccion {
+            background: linear-gradient(to bottom, rgb(248, 248, 247), #f9fbff);
+            font-weight: bolder;
+            line-height: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
 
-thead {
-    background-color: white;
-}
+        .seccion:hover {
+            background: linear-gradient(to bottom, #f0f0f0, #f9fbff);
+            cursor: pointer;
+        }
 
-tbody {
-    display: flex;
-    flex-direction: row;
-}
+        /* Sección de clasificación. Partes principales */
 
-.icono {
-    width: 82px;
-    margin-right: 22px;
-}
-
-#medallas {
-    width: 262px;
-    margin-right: 22px;
-}
-
-#medallas-paises {
-    width: 292px;
-    margin-right: 22px;
-}
-
-.seccion {
-    background: linear-gradient(to bottom, rgb(248, 248, 247), #f9fbff);
-    font-weight: bolder;
-    line-height: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.seccion:hover {
-    background: linear-gradient(to bottom, #f0f0f0, #f9fbff);
-    cursor: pointer;
-}
+        #enlace-medallero-paises {
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
 
-tr {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
+        #seccion-clasificacion {
+            border-left: rgb(214, 214, 214) 2px solid;
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
 
-#seccion-clasificacion{
-    border-left: rgb(214, 214, 214) 2px solid;
-}
 
 
-#seccion-noticias{
-    border-left: rgb(214, 214, 214) 2px solid;
-}
+        #enlace-medallero-paises {
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-decoration: none;
+        }
+
+        #enlace-medallero-paises:active {
+            color: #000000;
+        }
+
+        #enlace-medallero-paises:visited {
+            color: #000000;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:active {
+            color: #000000;
+        }
+
+        a:visited {
+            color: #000000;
+        }
+
+
+
+        th {
+            height: 42px;
+        }
+
+        .tr-widget {
+            background-color: white;
+        }
+
+
+
+        .icono {
+            width: 82px;
+            margin-right: 22px;
+        }
+
+        #medallas {
+            width: 262px;
+            margin-right: 22px;
+        }
+
+        #medallas-paises {
+            width: 292px;
+            margin-right: 22px;
+        }
+
+        .medalla {
+            width: 2.5rem;
+            margin: 0.2rem;
+        }
+
+
+
+        #div-medallero-paises,
+        #medallas-esp {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+            flex-direction: row;
+        }
+
+        #medallas-esp {
+            width: 38%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .td-medallas-esp span {
+            font-size: 1.9rem;
+            margin: 0.5rem;
+
+        }
+
+        #titulo-medallas-españa{
+            padding-left:1.2rem;
+            font-weight: bold;
+        }
+
+
+        #seccion-noticias {
+            border-left: rgb(214, 214, 214) 2px solid;
+            width: 30%;
+        }
+
+        #medallero-paises {
+            width: 100%;
+        }
+
+        #medallero-paises tr {
+            text-align: center;
+        }
+
+        #tbody-medallero {
+            width: 100%;
+        }
+
+        .nombre-pais {
+            text-align: left;
+        }
+
+        #medallero-paises tr {
+            border-bottom: 2px solid #000;
+            height: 1.2rem;
+            /* Añade el borde inferior deseado */
+        }
+
+        #medallero-thead th {
+            height: 1.4rem;
+        }
+
+        #div-medallero-paises {
+            width: 52%;
+        }
+
+        .td-bandera img {
+            width: 1.5rem;
+            height: auto;
+        }
+
+        #medallero-thead-titulo-medallero {
+            color: #858585;
+            text-align: left;
+        }
+
+        #medallero-thead-titulo-oro {
+            background-color: #ffeb91;
+        }
+
+        #medallero-thead-titulo-plata {
+            background-color: #dbdbdb;
+        }
+
+        #medallero-thead-titulo-bronce {
+            background-color: #d6afaf;
+        }
+
+        #medallero-thead-titulo-total {
+            background-color: #363636;
+            color: white
+        }
     </style>
 
-<main>
-    <table>
-        <thead>
-            <tr>
-                <th id="celda-logo"><img id="logo-euro" src="img/logo-olimpiadas.png" /></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                    <td class="seccion">
-                        <a target="_parent"
-                        href="https://www.europapress.es/deportes/futbol-00162/noticia-partidos-hoy-eurocopa-2024-hora-donde-ver-20240627135347.html">
-                        <div><img id="medallas" src="img/medallas-esp.png" /></div>
-                        <div>Medallas<br><span class="parte-baja">de España</span></div>
+
+    <main>
+
+        <table id="widget-olimpiadas">
+            <thead>
+                <tr class="tr-widget">
+                    <th id="celda-logo"><img id="logo-euro" src="img/logo-olimpiadas.png" /></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbody-widget">
+                <tr class="tr-widget">
+                    <td id="seccion-clasificacion" class="seccion">
+                        <a id="enlace-medallero-paises" target="_parent"
+                            href="https://www.epdata.es/datos/eurocopa-equipos-jugadores-estadisticas-historicas-graficos/597">
+                            <div id="div-medallero-paises">
+                                <table id="medallero-paises">
+                                    <thead id="medallero-thead">
+                                        <tr>
+                                            <th colspan="3" id="medallero-thead-titulo-medallero"></th>
+                                            <th id="medallero-thead-titulo-oro">Oro</th>
+                                            <th id="medallero-thead-titulo-plata">Plata</th>
+                                            <th id="medallero-thead-titulo-bronce">Bronce</th>
+                                            <th id="medallero-thead-titulo-total">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-medallero">
+                                        <tr class="medallero-tr">
+                                            <td>1º</td>
+                                            <td class="td-bandera"><img
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg">
+                                            </td>
+                                            <td class="nombre-pais">nombre-país</td>
+                                            <td>6</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2º</td>
+                                            <td class="td-bandera"><img
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg">
+                                            </td>
+                                            <td class="nombre-pais">nombre-país</td>
+                                            <td>6</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3º</td>
+                                            <td class="td-bandera"><img
+                                                    src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg">
+                                            </td>
+                                            <td class="nombre-pais">nombre-país</td>
+                                            <td>6</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="border-top: black solid 2px">Ver más</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="medallas-esp">
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-medallas-esp"><img class="medalla" src="img/oro.png"><span
+                                                    id="num-oro">0</span></td>
+                                            <td class="td-medallas-esp"><img class="medalla" src="img/plata.png"><span
+                                                    id="num-plata">0</span></td>
+                                            <td class="td-medallas-esp"><img class="medalla" src="img/bronce.png"><span
+                                                    id="num-bronce">0</span></td>
+                                            <td class="td-medallas-esp" id="titulo-medallas-españa">
+                                                <div>Medallas<br>de España</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </a>
                     </td>
-                <td id="seccion-clasificacion" class="seccion">
-                    <a target="_parent"
-                    href="https://www.epdata.es/datos/eurocopa-equipos-jugadores-estadisticas-historicas-graficos/597">
-                    <div><img id="medallas-paises" src="img/medallas-paises.png" /></div>
-                </a>
-                </td>
-                <td id="seccion-noticias" class="seccion">
-                    <a target="_parent"
-                    href="https://www.europapress.es/deportes/futbol/eurocopa-00765/">
-                    <div><img class="icono" src="img/laultimahora.png" /></div>
-                    <div>La última hora<br><span class="parte-baja"></span></div>
-                </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</main>
+                    </td>
+                    <td id="seccion-noticias" class="seccion">
+                        <a target="_parent" href="https://www.europapress.es/deportes/olimpiadas-00169/">
+                            <div><img class="icono" src="img/laultimahora.png" /></div>
+                            <div>La última hora<br><span class="parte-baja"></span></div>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
 </body>
 
